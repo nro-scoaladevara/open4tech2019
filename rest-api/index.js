@@ -12,7 +12,7 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 
 /* Establish connection to the local MongoDB server using the open4tech2019 database */
-mongoose.connect('mongodb://localhost/open4tech2019');
+mongoose.connect('mongodb+srv://netrom:netrom@open4tech-knecu.mongodb.net/test?retryWrites=true&w=majority');
 
 /* Create a new web server instance */
 const app = express();
@@ -29,5 +29,5 @@ itemRoutes(app);
 
 addErrorHandlers(app);
 
-const port = 3000;
+const port = 3001;
 app.listen(port, () => console.log(`Open4Tech 2019 REST API listening on port ${port}!`));
