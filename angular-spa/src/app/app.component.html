@@ -1,0 +1,14 @@
+<div class="container">
+    <mat-toolbar fxLayout>
+        <div fxFlex>
+            Open4Tech
+        </div>
+        <div fxLayoutAlign="end" *ngIf="showHomePage$ | async">
+            <button mat-flat-button (click)="goHome()">Back to homepage</button>
+        </div>
+    </mat-toolbar>
+    <div class="body">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

@@ -1,0 +1,11 @@
+<h2>{{list.id ? 'Edit list' : 'Create a new list'}}</h2>
+<form fxLayout="column">
+  <mat-form-field appearance="outline" fxFlexAlign="start">
+    <mat-label>List name</mat-label>
+    <input matInput placeholder="List name" [(ngModel)]="list.name" name="name">
+  </mat-form-field>
+  <div fxLayout="row" fxFlexAlign="start" fxLayoutGap="10px">
+    <button mat-raised-button (click)="onSubmit()">{{list.id ? 'Save list' : 'New list'}}</button>
+    <button mat-button *ngIf="list?.id" (click)="cancel()">Cancel</button>
+  </div>
+</form>
